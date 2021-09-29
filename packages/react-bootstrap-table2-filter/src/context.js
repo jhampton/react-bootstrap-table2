@@ -85,7 +85,7 @@ export default (
       return this.data;
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate(nextProps) {
       // let nextData = nextProps.data;
       if (!isRemoteFiltering() && !_.isEqual(nextProps.data, this.data)) {
         this.doFilter(nextProps, this.isEmitDataChange);

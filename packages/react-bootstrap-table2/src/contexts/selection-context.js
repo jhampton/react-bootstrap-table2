@@ -26,7 +26,7 @@ class SelectionProvider extends React.Component {
     return this.selected;
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentDidUpdate(nextProps) {
     if (nextProps.selectRow) {
       this.selected = nextProps.selectRow.selected || this.selected;
     }

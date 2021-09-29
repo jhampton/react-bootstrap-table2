@@ -46,7 +46,7 @@ export default (
       };
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate(nextProps) {
       if (nextProps.cellEdit && isRemoteCellEdit()) {
         if (nextProps.cellEdit.options.errorMessage) {
           this.setState(() => ({

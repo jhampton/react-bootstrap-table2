@@ -21,7 +21,7 @@ export default () => {
       return this.props.data;
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate(nextProps) {
       this.setState(() => ({ data: nextProps.data }));
     }
 

@@ -98,7 +98,7 @@ class StateProvider extends React.Component {
 
   getPaginationRemoteEmitter = () => this.remoteEmitter || this.props.remoteEmitter;
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentDidUpdate(nextProps) {
     const { custom } = nextProps.pagination.options;
 
     // user should align the page when the page is not fit to the data size when remote enable

@@ -46,7 +46,7 @@ class TextFilter extends Component {
     this.cleanTimer();
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentDidUpdate(nextProps) {
     if (nextProps.defaultValue !== this.props.defaultValue) {
       this.applyFilter(nextProps.defaultValue);
     }

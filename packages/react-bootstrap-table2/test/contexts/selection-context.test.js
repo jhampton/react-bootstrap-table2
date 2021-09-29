@@ -99,7 +99,7 @@ describe('DataContext', () => {
 
     beforeEach(() => {
       wrapper = shallow(shallowContext());
-      wrapper.instance().UNSAFE_componentWillReceiveProps({
+      wrapper.instance().componentDidUpdate({
         selectRow: newSelectRow
       });
     });
@@ -115,7 +115,7 @@ describe('DataContext', () => {
           ...defaultSelectRow,
           selected: defaultSelected
         }));
-        wrapper.instance().UNSAFE_componentWillReceiveProps({
+        wrapper.instance().componentDidUpdate({
           selectRow: defaultSelectRow
         });
       });
@@ -128,7 +128,7 @@ describe('DataContext', () => {
     describe('if nextProps.selectRow is not existing', () => {
       beforeEach(() => {
         wrapper = shallow(shallowContext());
-        wrapper.instance().UNSAFE_componentWillReceiveProps({});
+        wrapper.instance().componentDidUpdate({});
       });
 
       it('should not set this.selected', () => {

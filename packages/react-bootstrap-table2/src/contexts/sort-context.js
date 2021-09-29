@@ -51,7 +51,7 @@ export default (
       }
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate(nextProps) {
       const { sort, columns } = nextProps;
       if (sort && sort.dataField && sort.order) {
         this.setState({

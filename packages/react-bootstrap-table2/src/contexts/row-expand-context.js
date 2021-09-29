@@ -21,7 +21,7 @@ class RowExpandProvider extends React.Component {
     this.setState({ isClosing: this.state.isClosing.filter(value => value !== closedRow) });
   };
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentDidUpdate(nextProps) {
     if (nextProps.expandRow) {
       let nextExpanded = [...(nextProps.expandRow.expanded || this.state.expanded)];
       const { nonExpandable = [] } = nextProps.expandRow;

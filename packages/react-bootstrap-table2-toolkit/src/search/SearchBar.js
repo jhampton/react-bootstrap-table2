@@ -47,7 +47,7 @@ class SearchBar extends React.Component {
     debounceCallback();
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentDidUpdate(nextProps) {
     this.setState({ value: nextProps.searchText });
   }
 

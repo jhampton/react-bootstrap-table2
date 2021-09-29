@@ -81,7 +81,7 @@ describe('DataContext', () => {
 
     beforeEach(() => {
       wrapper = shallow(shallowContext());
-      wrapper.instance().UNSAFE_componentWillReceiveProps({
+      wrapper.instance().componentDidUpdate({
         data: newData
       });
     });

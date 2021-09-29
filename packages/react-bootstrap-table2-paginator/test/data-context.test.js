@@ -174,7 +174,7 @@ describe('PaginationDataContext', () => {
           data: [],
           pagination: { ...defaultPagination }
         };
-        instance.UNSAFE_componentWillReceiveProps(nextProps);
+        instance.componentDidUpdate(nextProps);
       });
 
       it('should reset currPage to first page', () => {
@@ -195,7 +195,7 @@ describe('PaginationDataContext', () => {
             data: [],
             pagination: { ...defaultPagination, options: { onPageChange } }
           };
-          instance.UNSAFE_componentWillReceiveProps(nextProps);
+          instance.componentDidUpdate(nextProps);
         });
 
         it('should call options.onPageChange correctly', () => {

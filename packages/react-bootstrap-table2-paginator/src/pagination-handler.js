@@ -13,7 +13,7 @@ export default WrappedComponent =>
       this.state = this.initialState();
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate(nextProps) {
       const { dataSize, currSizePerPage } = nextProps;
       if (currSizePerPage !== this.props.currSizePerPage || dataSize !== this.props.dataSize) {
         const totalPages = this.calculateTotalPage(currSizePerPage, dataSize);

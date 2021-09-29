@@ -51,7 +51,7 @@ export default (options = {
       }
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate(nextProps) {
       if (nextProps.searchText !== this.props.searchText) {
         if (isRemoteSearch()) {
           handleRemoteSearchChange(nextProps.searchText);

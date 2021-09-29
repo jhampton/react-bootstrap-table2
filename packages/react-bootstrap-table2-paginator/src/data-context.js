@@ -21,8 +21,8 @@ class PaginationDataProvider extends Provider {
   }
 
   // eslint-disable-next-line camelcase, react/sort-comp
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    super.UNSAFE_componentWillReceiveProps(nextProps);
+  componentDidUpdate(nextProps) {
+    super.componentDidUpdate(nextProps);
     const { currSizePerPage } = this;
     const { custom, onPageChange } = nextProps.pagination.options;
 

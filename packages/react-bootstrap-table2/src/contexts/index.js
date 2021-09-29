@@ -84,7 +84,7 @@ const withContext = Base =>
       }
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate(nextProps) {
       if (nextProps.columns.filter(col => col.sort).length <= 0) {
         this.SortContext = null;
       } else if (!this.SortContext) {

@@ -164,13 +164,13 @@ describe('paginationHandler', () => {
       });
 
       it('should setting correct state.totalPages', () => {
-        instance.UNSAFE_componentWillReceiveProps(nextProps);
+        instance.componentDidUpdate(nextProps);
         expect(instance.state.totalPages).toEqual(
           instance.calculateTotalPage(nextProps.currSizePerPage));
       });
 
       it('should setting correct state.lastPage', () => {
-        instance.UNSAFE_componentWillReceiveProps(nextProps);
+        instance.componentDidUpdate(nextProps);
         const totalPages = instance.calculateTotalPage(nextProps.currSizePerPage);
         expect(instance.state.lastPage).toEqual(
           instance.calculateLastPage(totalPages));
@@ -186,13 +186,13 @@ describe('paginationHandler', () => {
       });
 
       it('should setting correct state.totalPages', () => {
-        instance.UNSAFE_componentWillReceiveProps(nextProps);
+        instance.componentDidUpdate(nextProps);
         expect(instance.state.totalPages).toEqual(
           instance.calculateTotalPage(nextProps.currSizePerPage, nextProps.dataSize));
       });
 
       it('should setting correct state.lastPage', () => {
-        instance.UNSAFE_componentWillReceiveProps(nextProps);
+        instance.componentDidUpdate(nextProps);
         const totalPages = instance.calculateTotalPage(
           nextProps.currSizePerPage, nextProps.dataSize);
         expect(instance.state.lastPage).toEqual(
